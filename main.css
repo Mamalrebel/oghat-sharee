@@ -1,10 +1,67 @@
-body {
-    background: linear-gradient(rgba(0 , 0 , 0 , 0.6) , rgba(0 , 0 , 0 , 0.6)) , url(./اوقات+شرعی.jpg) no-repeat center/cover;
-    min-height: 100vh;
-    direction: rtl;
+@font-face{
+    font-family: parasto;
+    src: url(./assets/Parastoo.ttf);
 }
 
-.oghat {
+body {
+    background: linear-gradient(rgba(0 , 0 , 0 , 0.6) , rgba(0 , 0 , 0 , 0.6)) , url(./assets/اوقات+شرعی.jpg) no-repeat center/cover;
+    min-height: 100vh;
+    direction: rtl;
+    font-family: parasto;
+}
+
+.oghat-sharee {
+    display: flex;
+    flex-direction: column;
+}
+
+#oghat {
+    padding: 10px 20px;
+    margin: 10px auto;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: parasto;
+    border: 3px solid green;
+    border-radius: 10px;
+    outline: none;
+    min-width: 300px;
     text-align: center;
+}
+
+
+.oghat-d {
+    text-align: center;
+}
+
+.oghat-d p {
     color: white;
+    font-size: 2em;
+    font-weight: 500;
+}
+.oghat-d p span {
+    margin-right: 20px;
+    color: rgb(16, 175, 200);
+    font-weight: 700;
+    font-size: 35px;
+}
+#erorr-1 {
+    background-color: rgb(236, 22, 22, 0.7);
+    position: absolute;
+    right: 100px;
+    top: 100px;
+    padding: 20px;
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+}
+
+.hide {
+    opacity: 0;
+}
+.show {
+    opacity: 100%;
 }

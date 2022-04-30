@@ -17,8 +17,9 @@ function loadJSON(method , url , callback){
     xhr.onreadystatechange = function () {
         if(this.status === 200 && this.readyState === 4){
             callback(JSON.parse(this.response));
+            id("erorr").innerHTML = "";
         } else {
-            
+            id("erorr").innerHTML = `<span id="erorr-1">اسم شهر اشتباه است یا اطلاعات شهر مورد نظر موجود نیست!</>`
         }
     }
     xhr.send();
@@ -33,13 +34,13 @@ var $gh_aftab = id("gh-aftab");
 var $nime_shab = id("nime-shab");
 
 function displayResult(response){
-    $location.innerHTML = `${response.result.city}`;
-    $azan_maghreb.innerHTML = `${response.result.azan_maghreb}`;
-    $azan_sobh.innerHTML = `${response.result.azan_sobh}`;
-    $azan_zohr.innerHTML = `${response.result.azan_zohre}`;
-    $gh_aftab.innerHTML = `${response.result.ghorob_aftab}`;
-    $t_aftab.innerHTML = `${response.result.toloe_aftab}`;
-    $nime_shab.innerHTML = `${response.result.nime_shabe_sharie}`;
+    $location.innerHTML = ` ${response.result.city}`;
+    $azan_maghreb.innerHTML = ` ${response.result.azan_maghreb}`;
+    $azan_sobh.innerHTML = ` ${response.result.azan_sobh}`;
+    $azan_zohr.innerHTML = ` ${response.result.azan_zohre}`;
+    $gh_aftab.innerHTML = ` ${response.result.ghorob_aftab}`;
+    $t_aftab.innerHTML = ` ${response.result.toloe_aftab}`;
+    $nime_shab.innerHTML = ` ${response.result.nime_shabe_sharie}`;
 }
 
 
